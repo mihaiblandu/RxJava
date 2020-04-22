@@ -1,5 +1,6 @@
 package javabrains.io.java_rx;
 
+import io.reactivex.Observer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import reactor.core.publisher.Mono;
@@ -12,6 +13,7 @@ public class JavaRxApplication {
         // With Lambda and Method Reference
         Thread thread = new Thread(JavaRxApplication::runIt);
         thread.run();
+        Observer observer = null;
     }
     private static void runIt() {
         System.out.println("Hello World");
